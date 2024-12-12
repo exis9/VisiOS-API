@@ -8,8 +8,11 @@ As of the version 1.1.3, VisiOS will be introducing the VisiAPI.
 Fetch from the target URL
 ```js
 // This will fetch the html of the target URL
-let text = VisiAPI('fetch', {url:'https://url...'}) 
-console.log( text )
+async function test(){
+	let text = await VisiAPI('fetch', {url:'https://google.com'})
+	console.log( text )
+}
+test()
 
 // NOTE: ↓ You can also specify "options" just like the JavaScript fetch
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
