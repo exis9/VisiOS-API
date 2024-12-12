@@ -30,6 +30,12 @@ Open the file path you specified
 ```js
 // ↓ You can open folders or files by setting the desktop index number(1-9) and file path to a folder or a file.
 VisiAPI('openFile', {idx:1, path:'file_path_to_open'})
+
+// for example, if you have a folder named "My Documents" on the desktop 3
+VisiAPI('openFile', {idx:3, path:'My Documents'})
+
+// If you also want to specify the size
+VisiAPI('openFile', {idx:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
 ## close
 Close the current app
