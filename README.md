@@ -58,3 +58,24 @@ VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
 VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow!")'})
 ```
 
+
+## localStorage_get
+If you pass a key name, this will return the key's value from the local storage, or null if the key does not exist
+
+```js
+let v = VisiAPI('localStorage_get', {n:'test_key'})
+alert( v )
+```
+
+## localStorage_set
+If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
+
+```js
+async function test(){
+	VisiAPI('localStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
+	let v = await VisiAPI('localStorage_get', {n:'test_key'})
+	alert( v ) //wow!!
+}
+test()
+```
+
