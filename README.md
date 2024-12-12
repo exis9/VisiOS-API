@@ -34,7 +34,7 @@ VisiAPI('openFile', {idx:1, path:'file_path_to_open'})
 // for example, if you have a folder named "My Documents" on the desktop 3
 VisiAPI('openFile', {idx:3, path:'My Documents'})
 
-// If you also want to specify the size
+// If you also want to specify the size (This works only for folders)
 VisiAPI('openFile', {idx:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
 ## close
