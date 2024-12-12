@@ -42,6 +42,9 @@ Open URL(or execute HTML/JavaScript) in a new VisiOS window
 // Open URL
 VisiAPI('open', {url:'https://url_to_open'})
 
+// Specify the size and starting coordinates
+VisiAPI('open', {url:'https://url_to_open', w:700, h:500, x:100, y:10})
+
 // HTML
 VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
 
