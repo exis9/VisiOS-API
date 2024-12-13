@@ -78,3 +78,23 @@ If you pass a key name and value, this will add that key to the local storage, o
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
 ```
 
+## memStorage_get
+If you pass a key name, this will return the key's value from the memory storage, or null if the key does not exist.
+The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
+
+```js
+async function test(){
+	VisiAPI('memStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
+	let v = await VisiAPI('memStorage_get', {n:'test_key'})
+	alert( v ) //wow!!
+}
+test()
+```
+
+## memStorage_set
+If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
+The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
+
+```js
+VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
+```
