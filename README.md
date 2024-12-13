@@ -6,11 +6,22 @@ As of the version 1.1.3, VisiOS will be introducing the VisiAPI.
 
 # Index
 
-[🟩 Storage APIs](#storage-apis)
-　- [🔷 localStorage_set](#localstorage_set)
-　- [🔷 localStorage_get](#localstorage_get)
-　- [🔷 memStorage_set](#memstorage_set)
-　- [🔷 memStorage_get](#memstorage_get)
+🟩 [General APIs](#fetch)<br>
+　🔷 [fetch](#fetch)<br>
+　🔷 [copyToClipboard](#copytoclipboard)<br>
+
+🟩 [File APIs](#file-apis)<br>
+　🔷 [openFile](#openfile)<br>
+　🔷 [close](#close)<br>
+　🔷 [open](#open)<br>
+
+🟩 [Storage APIs](#storage-apis)<br>
+　🔷 [localStorage_set](#localstorage_set)<br>
+　🔷 [localStorage_get](#localstorage_get)<br>
+　🔷 [memStorage_set](#memstorage_set)<br>
+　🔷 [memStorage_get](#memstorage_get)<br>
+
+---
 
 ## fetch
 Fetch from the target URL
@@ -32,6 +43,8 @@ Copy text to the clipboard
 ```js
 VisiAPI('copyToClipboard', {text:'Text to copy'}) 
 ```
+
+# File APIs
 
 ## openFile
 Open the file path you specified
