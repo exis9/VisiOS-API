@@ -12,8 +12,8 @@ As of the version 1.1.3, VisiOS has introduced the VisiAPI.
 
 🟩 [File APIs](#file-apis)<br>
 　🔷 [openFile](#openfile)<br>
-　🔷 [closeWindow](#closeWindow)<br>
 　🔷 [openPage](#openPage)<br>
+　🔷 [closeWindow](#closeWindow)<br>
 
 🟩 [Storage APIs](#storage-apis)<br>
 　🔷 [localStorage_set](#localstorage_set)<br>
@@ -74,27 +74,7 @@ VisiAPI('openFile', {desktopId:3, path:'My Documents'})
 // If you also want to specify the size (This works only for folders)
 VisiAPI('openFile', {desktopId:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
-## closeWindow
-Close the current app
-```js
-VisiAPI('closeWindow')
-```
 
-Close a selected window 
-```js
-async function test(){
-	let windowId = await VisiAPI('openFile', {desktopId: 3, path: 'My Documents'})
-	VisiAPI('closeWindow', { desktopId: 3, windowId: windowId })
-}
-test()
-```
-```js
-async function test(){
-	let windowId = await VisiAPI('openPage', {html: '<h1>Hello!</h1><br><br>This is HTML!'})
-	VisiAPI('closeWindow', { windowId: windowId })
-}
-test()
-```
 ## openPage
 Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
 ```js
@@ -115,6 +95,28 @@ VisiAPI('openPage', {type:'newTab', html:'<h1>Hello!</h1><br><br>This is HTML!'}
 
 // HTML for a new popup window (*You cannot use JavaScript for this)
 VisiAPI('openPage', {type:'newWindow', html:'<h1>Hello!</h1><br><br>This is HTML!'})
+```
+
+## closeWindow
+Close the current app
+```js
+VisiAPI('closeWindow')
+```
+
+Close a selected window 
+```js
+async function test(){
+	let windowId = await VisiAPI('openFile', {desktopId: 3, path: 'My Documents'})
+	VisiAPI('closeWindow', { desktopId: 3, windowId: windowId })
+}
+test()
+```
+```js
+async function test(){
+	let windowId = await VisiAPI('openPage', {html: '<h1>Hello!</h1><br><br>This is HTML!'})
+	VisiAPI('closeWindow', { windowId: windowId })
+}
+test()
 ```
 
 ---
