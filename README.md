@@ -12,8 +12,8 @@ As of the version 1.1.3, VisiOS has introduced the VisiAPI.
 
 🟩 [File APIs](#file-apis)<br>
 　🔷 [openFile](#openfile)<br>
-　🔷 [close](#close)<br>
-　🔷 [open](#open)<br>
+　🔷 [closeWindow](#closeWindow)<br>
+　🔷 [openPage](#openPage)<br>
 
 🟩 [Storage APIs](#storage-apis)<br>
 　🔷 [localStorage_set](#localstorage_set)<br>
@@ -74,10 +74,18 @@ VisiAPI('openFile', {idx:3, path:'My Documents'})
 // If you also want to specify the size (This works only for folders)
 VisiAPI('openFile', {idx:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
-## close
+## closeWindow
 Close the current app
 ```js
-VisiAPI('close')
+VisiAPI('closeWindow')
+```
+Close a selected window 
+```js
+async function test(){
+	let window_id = await VisiAPI('openPage', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
+	VisiAPI('closeWindow', {id:window_id})
+}
+test()
 ```
 ## openPage
 Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
