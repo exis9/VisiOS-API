@@ -2,7 +2,7 @@
 
 As of the version 1.1.3, VisiOS will be introducing the VisiAPI.
 
-(Sorry, I've been writing this doc and it's still a manifest. Not ready yet! ^^)
+(Sorry, I've been writing this doc and it's still a draft. Not ready yet! ^^)
 
 ## fetch
 Fetch from the target URL
