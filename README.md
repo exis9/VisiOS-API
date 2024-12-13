@@ -79,20 +79,26 @@ Close the current app
 ```js
 VisiAPI('close')
 ```
-## open
-Open URL(or execute HTML/JavaScript) in a new VisiOS window
+## openPage
+Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
 ```js
 // Open URL
-VisiAPI('open', {url:'https://url_to_open'})
+VisiAPI('openPage', {url:'https://url_to_open'})
 
 // Specify the size and starting coordinates
-VisiAPI('open', {url:'https://url_to_open', w:700, h:500, x:100, y:10})
+VisiAPI('openPage', {url:'https://url_to_open', w:700, h:500, x:100, y:10})
 
 // HTML
-VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
+VisiAPI('openPage', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
 
 // HTML + JS
-VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow!")'})
+VisiAPI('openPage', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow!")'})
+
+// HTML for a new tab (*You cannot use JavaScript for this)
+VisiAPI('openPage', {type:'newTab', html:'<h1>Hello!</h1><br><br>This is HTML!'})
+
+// HTML for a new popup window (*You cannot use JavaScript for this)
+VisiAPI('openPage', {type:'newWindow', html:'<h1>Hello!</h1><br><br>This is HTML!'})
 ```
 
 ---
