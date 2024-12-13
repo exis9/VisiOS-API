@@ -4,6 +4,14 @@ As of the version 1.1.3, VisiOS will be introducing the VisiAPI.
 
 (Sorry, I've been writing this doc and it's still a draft. Not ready yet! ^^)
 
+# Index
+
+[🟩 Storage APIs](#storage-apis)
+　- [🔷 localStorage_set](#localstorage_set)
+　- [🔷 localStorage_get](#localstorage_get)
+　- [🔷 memStorage_set](#memstorage_set)
+　- [🔷 memStorage_get](#memstorage_get)
+
 ## fetch
 Fetch from the target URL
 ```js
@@ -61,6 +69,13 @@ VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow
 
 # Storage APIs
 
+## localStorage_set
+If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
+
+```js
+VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
+```
+
 ## localStorage_get
 If you pass a key name, this will return the key's value from the local storage, or null if the key does not exist
 
@@ -73,11 +88,13 @@ async function test(){
 test()
 ```
 
-## localStorage_set
-If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
+
+## memStorage_set
+If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
+The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
 
 ```js
-VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
+VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
 ```
 
 ## memStorage_get
@@ -94,10 +111,3 @@ async function test(){
 test()
 ```
 
-## memStorage_set
-If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
-The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
-
-```js
-VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
-```
