@@ -39,7 +39,7 @@ Fetch from the target URL
 // This will fetch the html of the target URL
 async function test(){
 	let text = await VisiAPI('fetch', {url:'https://google.com'})
-	console.log( text )
+	alert( text ) //display the html of the target URL
 }
 test()
 
