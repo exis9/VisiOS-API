@@ -59,6 +59,8 @@ VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow
 ```
 
 
+# Storage APIs
+
 ## localStorage_get
 If you pass a key name, this will return the key's value from the local storage, or null if the key does not exist
 
