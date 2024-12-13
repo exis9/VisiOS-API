@@ -66,13 +66,13 @@ VisiAPI('copyToClipboard', {text:'Text to copy'})
 Open the file path you specified
 ```js
 // ↓ You can open folders or files by setting the desktop index number(1-9) and file path to a folder or a file.
-VisiAPI('openFile', {idx:1, path:'file_path_to_open'})
+VisiAPI('openFile', {desktopId:1, path:'file_path_to_open'})
 
 // for example, if you have a folder named "My Documents" on the desktop 3
-VisiAPI('openFile', {idx:3, path:'My Documents'})
+VisiAPI('openFile', {desktopId:3, path:'My Documents'})
 
 // If you also want to specify the size (This works only for folders)
-VisiAPI('openFile', {idx:3, path:'My Documents', w:700, h:400}) //Specify the width and height
+VisiAPI('openFile', {desktopId:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
 ## closeWindow
 Close the current app
@@ -83,7 +83,7 @@ VisiAPI('closeWindow')
 Close a selected window 
 ```js
 async function test(){
-	let windowId = await VisiAPI('openFile', {idx: 3, path: 'My Documents'})
+	let windowId = await VisiAPI('openFile', {desktopId: 3, path: 'My Documents'})
 	VisiAPI('closeWindow', { desktopId: 3, windowId: windowId })
 }
 test()
