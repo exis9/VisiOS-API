@@ -79,11 +79,19 @@ Close the current app
 ```js
 VisiAPI('closeWindow')
 ```
+
 Close a selected window 
 ```js
 async function test(){
-	let window_id = await VisiAPI('openPage', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
-	VisiAPI('closeWindow', {id:window_id})
+	let windowId = await VisiAPI('openFile', {idx:3, path:'My Documents'})
+	VisiAPI('closeWindow', { desktopId:3, windowId:windowId })
+}
+test()
+```
+```js
+async function test(){
+	let windowId = await VisiAPI('openPage', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
+	VisiAPI('closeWindow', { windowId:windowId })
 }
 test()
 ```
