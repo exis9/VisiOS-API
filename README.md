@@ -23,6 +23,14 @@ As of the version 1.1.3, VisiOS will be introducing the VisiAPI.
 
 ---
 
+<div id="user-content-toc">
+	<ul align="center" style="list-style: none;">
+		<summary>
+			<h1>General APIs</h1>
+		</summary>
+	</ul>
+</div>
+
 ## fetch
 Fetch from the target URL
 ```js
@@ -44,7 +52,15 @@ Copy text to the clipboard
 VisiAPI('copyToClipboard', {text:'Text to copy'}) 
 ```
 
-# File APIs
+---
+
+<div id="user-content-toc">
+	<ul align="center" style="list-style: none;">
+		<summary>
+			<h1>File APIs</h1>
+		</summary>
+	</ul>
+</div>
 
 ## openFile
 Open the file path you specified
@@ -78,6 +94,8 @@ VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
 // HTML + JS
 VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow!")'})
 ```
+
+---
 
 <div id="user-content-toc">
 	<ul align="center" style="list-style: none;">
