@@ -79,8 +79,13 @@ VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!'})
 VisiAPI('open', {html:'<h1>Hello!</h1><br><br>This is HTML!', script:'alert("Wow!")'})
 ```
 
-
-# Storage APIs
+<div id="user-content-toc">
+	<ul align="center" style="list-style: none;">
+		<summary>
+			<h1>Storage APIs</h1>
+		</summary>
+	</ul>
+</div>
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
