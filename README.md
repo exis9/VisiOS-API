@@ -20,6 +20,8 @@ As of the version 1.1.4, VisiOS has introduced the VisiAPI.
 　🔷 [localStorage_get](#localstorage_get)<br>
 　🔷 [memStorage_set](#memstorage_set)<br>
 　🔷 [memStorage_get](#memstorage_get)<br>
+　🔷 [appStorage_set](#appstorage_set)<br>
+　🔷 [appStorage_get](#appstorage_get)<br>
 
 ---
 
@@ -131,6 +133,7 @@ test()
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
+If it's just temporary, consider to use memStorage_set instead since it's more faster.
 
 ```js
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
@@ -166,6 +169,28 @@ This feature is good for storing temporary data that you want to share among mul
 async function test(){
 	VisiAPI('memStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
 	let v = await VisiAPI('memStorage_get', {n:'test_key'})
+	alert( v ) //wow!!
+}
+test()
+```
+
+
+
+## appStorage_set
+If you pass a key name and value, this will add that key to the app storage, or update that key's value if it already exists.
+If it's just temporary, consider to use memStorage_set instead since it's more faster.
+
+```js
+VisiAPI('appStorage_set', {n:'test_key', v:'Wow!!'})
+```
+
+## appStorage_get
+If you pass a key name, this will return the key's value from the app storage, or null if the key does not exist.
+
+```js
+async function test(){
+	VisiAPI('appStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
+	let v = await VisiAPI('appStorage_get', {n:'test_key'})
 	alert( v ) //wow!!
 }
 test()
