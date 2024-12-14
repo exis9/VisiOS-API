@@ -134,6 +134,8 @@ test()
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
 If it's just temporary, consider to use memStorage_set instead since it's more faster and doesn't use up the browser storage.
+You shouldn't rely on the local storage too much since the data will be lost when the user clear the browser cache.
+To avoid that, use the appStorage_set instead.
 
 ```js
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
