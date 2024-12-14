@@ -133,7 +133,7 @@ test()
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
-If it's just temporary, consider to use memStorage_set instead since it's more faster.
+If it's just temporary, consider to use memStorage_set instead since it's more faster and doesn't use up the browser storage.
 
 ```js
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
@@ -178,7 +178,7 @@ test()
 
 ## appStorage_set
 If you pass a key name and value, this will add that key to the app storage, or update that key's value if it already exists.
-If it's just temporary, consider to use memStorage_set instead since it's more faster.
+If it's just temporary, consider to use memStorage_set instead since it's more faster and doesn't use up the VisiOS storage.
 
 ```js
 VisiAPI('appStorage_set', {n:'test_key', v:'Wow!!'})
