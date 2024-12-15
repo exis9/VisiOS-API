@@ -7,22 +7,22 @@ As of version 1.1.4, VisiOS has introduced VisiAPI.
 # Index
 
 🟩 [General APIs](#fetch)<br>
-　🔷 [ver](#ver) - Get the current VisiOS version number<br>
-　🔷 [fetch](#fetch) - Fetch from the target URL<br>
-　🔷 [copyToClipboard](#copytoclipboard) - Copy text to the clipboard<br>
+　🔷 [ver](#ver) <sub>- Get the current VisiOS version number</sub><br>
+　🔷 [fetch](#fetch) <sub>- Fetch from the target URL</sub><br>
+　🔷 [copyToClipboard](#copytoclipboard) <sub>- Copy text to the clipboard</sub><br>
 
 🟩 [File APIs](#file-apis)<br>
-　🔷 [openFile](#openfile) - Open the file path you specified<br>
-　🔷 [openPage](#openPage) - Open URL (or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or tab)<br>
-　🔷 [closeWindow](#closeWindow) - Close the selected window<br>
+　🔷 [openFile](#openfile) <sub>- Open the file path you specified</sub><br>
+　🔷 [openPage](#openPage) <sub>- Open URL (or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or tab)</sub><br>
+　🔷 [closeWindow](#closeWindow) <sub>- Close the selected window</sub><br>
 
 🟩 [Storage APIs](#storage-apis)<br>
-　🔷 [localStorage_set](#localstorage_set) - Save data to the local storage<br>
-　🔷 [localStorage_get](#localstorage_get) - Get data from the local storage<br>
-　🔷 [memStorage_set](#memstorage_set) - Save data to the memory storage<br>
-　🔷 [memStorage_get](#memstorage_get) - Get data to the memory storage<br>
-　🔷 [appStorage_set](#appstorage_set) - Save data to the app storage<br>
-　🔷 [appStorage_get](#appstorage_get) - Get data to the app storage<br>
+　🔷 [localStorage_set](#localstorage_set) <sub>- Save data to the local storage</sub><br>
+　🔷 [localStorage_get](#localstorage_get) <sub>- Get data from the local storage</sub><br>
+　🔷 [memStorage_set](#memstorage_set) <sub>- Save data to the memory storage</sub><br>
+　🔷 [memStorage_get](#memstorage_get) <sub>- Get data to the memory storage</sub><br>
+　🔷 [appStorage_set](#appstorage_set) <sub>- Save data to the app storage</sub><br>
+　🔷 [appStorage_get](#appstorage_get) <sub>- Get data to the app storage</sub><br>
 
 ---
 
