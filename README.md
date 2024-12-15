@@ -87,6 +87,12 @@ VisiAPI('openFile', {desktopId:3, path:'My Documents'})
 // If you also want to specify the size (This works only for folders)
 VisiAPI('openFile', {desktopId:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
+```js
+// If you have a bookmark named Google on the desktop 1, you can open the bookmark like these:
+VisiAPI('openFile', {path:'Google', x:10, y:10, w:700, h:400}) //open in new VisiOS window (NOTE: x, y, w, h are optional)
+VisiAPI('openFile', {path:'Google', type:'newTab'}) //open in new tab
+VisiAPI('openFile', {path:'Google', type:'newWindow', x:0, y:0, w:700, h:400}) //open in new window
+```
 
 ## openPage
 Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
@@ -108,6 +114,9 @@ VisiAPI('openPage', {type:'newTab', html:'<h1>Hello!</h1><br><br>This is HTML!'}
 
 // HTML for a new popup window (*You cannot use JavaScript for this)
 VisiAPI('openPage', {type:'newWindow', html:'<h1>Hello!</h1><br><br>This is HTML!'})
+
+// You can also specify x, y, w, h
+VisiAPI('openPage', {type:'newWindow', html:'<h1>Hello!</h1><br><br>This is HTML!', x:0, y:0, w:700, h:400})
 ```
 
 ## closeWindow
