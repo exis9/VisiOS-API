@@ -97,7 +97,7 @@ VisiAPI('openFile', {path:'Google', type:'newWindow', x:0, y:0, w:700, h:400}) /
 ## openPage
 Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
 ```js
-// Open URL
+// Open URL (Open as a VisiOS window)
 VisiAPI('openPage', {url:'https://url_to_open'})
 
 // Specify the size and starting coordinates
