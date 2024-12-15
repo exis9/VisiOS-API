@@ -39,7 +39,7 @@ Get the current VisiOS version number
 ```js
 async function showVersion(){
 	let text = await VisiAPI('ver')
-	alert( text )
+	alert( text ) //for example: 1.1.4
 }
 showVersion()
 ```
