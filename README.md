@@ -2,7 +2,7 @@
 
 As of the version 1.1.4, VisiOS has introduced the VisiAPI.
 
-(Sorry, I've been writing this doc and it's still a draft. Not ready yet! ^^)
+(Sorry, I've been writing this doc and it's still a draft. Not perfectly ready yet! ^^)
 
 # Index
 
