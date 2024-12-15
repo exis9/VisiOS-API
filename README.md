@@ -1,6 +1,6 @@
 # VisiOS API Documentation
 
-As of the version 1.1.4, VisiOS has introduced the VisiAPI.
+As of version 1.1.4, VisiOS has introduced VisiAPI.
 
 (Sorry, I've been writing this doc and it's still a draft. Not perfectly ready yet! ^^)
 
@@ -54,7 +54,7 @@ async function test(){
 }
 test()
 
-// NOTE: ↓ You can also specify "options" just like the JavaScript fetch
+// NOTE: ↓ You can also specify "options" just like with fetch in JavaScript
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 VisiAPI('fetch', {url:'https://url...', options: {mode:..., method:..., body:... }}) 
 ```
@@ -81,21 +81,21 @@ Open the file path you specified
 // ↓ You can open folders or files by setting the desktop index number(1-9) and file path to a folder or a file.
 VisiAPI('openFile', {desktopId:1, path:'file_path_to_open'})
 
-// for example, if you have a folder named "My Documents" on the desktop 3
+// for example, if you have a folder named "My Documents" on Desktop 3
 VisiAPI('openFile', {desktopId:3, path:'My Documents'})
 
 // If you also want to specify the size (This works only for folders)
 VisiAPI('openFile', {desktopId:3, path:'My Documents', w:700, h:400}) //Specify the width and height
 ```
 ```js
-// If you have a bookmark named Google on the desktop 1, you can open the bookmark like these:
+// If you have a bookmark named Google on Desktop 1, you can open the bookmark like this:
 VisiAPI('openFile', {path:'Google', x:10, y:10, w:700, h:400}) //open in new VisiOS window (NOTE: x, y, w, h are optional)
 VisiAPI('openFile', {path:'Google', type:'newTab'}) //open in new tab
 VisiAPI('openFile', {path:'Google', type:'newWindow', x:0, y:0, w:700, h:400}) //open in new window
 ```
 
 ## openPage
-Open URL(or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or a tab)
+Open URL (or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or tab)
 ```js
 // Open URL (Open as a VisiOS window)
 VisiAPI('openPage', {url:'https://url_to_open'})
@@ -125,7 +125,7 @@ Close the current app
 VisiAPI('closeWindow')
 ```
 
-Close a selected window 
+Close the selected window
 ```js
 async function test(){
 	let windowId = await VisiAPI('openFile', {desktopId: 3, path: 'My Documents'})
@@ -153,9 +153,9 @@ test()
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
-If it's just temporary, consider to use memStorage_set instead since it's more faster and doesn't use up the browser storage.
-You shouldn't rely on the local storage too much since the data will be lost when the user clear the browser cache.
-To avoid that, use the appStorage_set instead.
+If it's just temporary, consider using memStorage_set instead since it's faster and doesn't use up the browser storage.
+You shouldn't rely on the local storage too much since the data will be lost when the user clears the browser cache.
+To avoid that, use appStorage_set instead.
 
 ```js
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
@@ -176,7 +176,7 @@ test()
 
 ## memStorage_set
 If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
-The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
+The memory storage is shared across all VisiOS apps and is cleared when the user closes the tab.
 
 ```js
 VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
@@ -184,8 +184,8 @@ VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
 
 ## memStorage_get
 If you pass a key name, this will return the key's value from the memory storage, or null if the key does not exist.
-The memory storage is shared among all the VisiOS apps and is cleared when the user closes the tab.
-This feature is good for storing temporary data that you want to share among multiple apps in real-time.
+The memory storage is shared across all VisiOS apps and is cleared when the user closes the tab.
+This feature is good for storing temporary data that you want to share across multiple apps in real time.
 
 ```js
 async function test(){
@@ -200,7 +200,7 @@ test()
 
 ## appStorage_set
 If you pass a key name and value, this will add that key to the app storage, or update that key's value if it already exists.
-If it's just temporary, consider to use memStorage_set instead since it's more faster and doesn't use up the VisiOS storage.
+If it's just temporary, consider using memStorage_set instead since it's faster and doesn't use up the VisiOS storage.
 
 ```js
 VisiAPI('appStorage_set', {n:'test_key', v:'Wow!!'})
