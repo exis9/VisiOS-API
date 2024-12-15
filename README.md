@@ -8,21 +8,21 @@ As of version 1.1.4, VisiOS has introduced VisiAPI.
 
 🟩 [General APIs](#fetch)<br>
 　🔷 [ver](#ver) - Get the current VisiOS version number<br>
-　🔷 [fetch](#fetch)<br>
-　🔷 [copyToClipboard](#copytoclipboard)<br>
+　🔷 [fetch](#fetch) - Fetch from the target URL<br>
+　🔷 [copyToClipboard](#copytoclipboard) - Copy text to the clipboard<br>
 
 🟩 [File APIs](#file-apis)<br>
-　🔷 [openFile](#openfile)<br>
-　🔷 [openPage](#openPage)<br>
-　🔷 [closeWindow](#closeWindow)<br>
+　🔷 [openFile](#openfile) - Open the file path you specified<br>
+　🔷 [openPage](#openPage) - Open URL (or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or tab)<br>
+　🔷 [closeWindow](#closeWindow) - Close the selected window<br>
 
 🟩 [Storage APIs](#storage-apis)<br>
-　🔷 [localStorage_set](#localstorage_set)<br>
-　🔷 [localStorage_get](#localstorage_get)<br>
-　🔷 [memStorage_set](#memstorage_set)<br>
-　🔷 [memStorage_get](#memstorage_get)<br>
-　🔷 [appStorage_set](#appstorage_set)<br>
-　🔷 [appStorage_get](#appstorage_get)<br>
+　🔷 [localStorage_set](#localstorage_set) - Save data to the local storage<br>
+　🔷 [localStorage_get](#localstorage_get) - Get data from the local storage<br>
+　🔷 [memStorage_set](#memstorage_set) - Save data to the memory storage<br>
+　🔷 [memStorage_get](#memstorage_get) - Get data to the memory storage<br>
+　🔷 [appStorage_set](#appstorage_set) - Save data to the app storage<br>
+　🔷 [appStorage_get](#appstorage_get) - Get data to the app storage<br>
 
 ---
 
