@@ -177,6 +177,7 @@ test()
 ## memStorage_set
 If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
 The memory storage is shared across all VisiOS apps and is cleared when the user closes the tab.
+
 (NOTE: Unlike localStorage_set and appStorage_set, memStorage_set simply stores values in a plane variable, so you don't have to serialize values using something like JSON.stringify)
 
 ```js
