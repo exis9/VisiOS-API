@@ -94,6 +94,17 @@ VisiAPI('openFile', {path:'Google', type:'newTab'}) //open in new tab
 VisiAPI('openFile', {path:'Google', type:'newWindow', x:0, y:0, w:700, h:400}) //open in new window
 ```
 
+The following technique can be also used for `openPage`
+```js
+// If you need to place the app in the top-right corner
+// ( xp is the percentage of the X coordinate on the screen. If you specify xp, x will be an offset from the xp position)
+VisiAPI('openFile', {path:'file_path_to_open', x:-700, y:0,  xp:100  w:700, h:400})
+
+// If you need to place the app in the center
+// (Specifying 50% in xp and yp, and subtract the 50% of the app size in x and y)
+VisiAPI('openFile', {path:'file_path_to_open', x:-350, y:-200,  xp:50, yp:50  w:700, h:400})
+```
+
 ## openPage
 Open URL (or execute HTML/JavaScript) in a new VisiOS window (or in a new actual window or tab)
 ```js
@@ -153,7 +164,7 @@ test()
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
-If it's just temporary, consider using memStorage_set instead since it's faster and doesn't use up the browser storage.
+If it's just temporary, consider using `memStorage_set` instead since it's faster and doesn't use up the browser storage.
 You shouldn't rely on the local storage too much since the data will be lost when the user clears the browser cache.
 To avoid that, use appStorage_set instead.
 
@@ -178,7 +189,7 @@ test()
 If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
 The memory storage is shared across all VisiOS apps and is cleared when the user closes the tab.
 
-(NOTE: Unlike localStorage_set and appStorage_set, memStorage_set simply stores values in a plane variable, so you don't have to serialize values using something like JSON.stringify)
+(NOTE: Unlike `localStorage_set` and `appStorage_set`, `memStorage_set` simply stores values in a plane variable, so you don't have to serialize values using something like JSON.stringify)
 
 ```js
 VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
@@ -202,7 +213,7 @@ test()
 
 ## appStorage_set
 If you pass a key name and value, this will add that key to the app storage, or update that key's value if it already exists.
-If it's just temporary, consider using memStorage_set instead since it's faster and doesn't use up the VisiOS storage.
+If it's just temporary, consider using `memStorage_set` instead since it's faster and doesn't use up the VisiOS storage.
 
 ```js
 VisiAPI('appStorage_set', {n:'test_key', v:'Wow!!'})
