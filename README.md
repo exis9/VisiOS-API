@@ -102,7 +102,7 @@ VisiAPI('openFile', {path:'file_path_to_open', x:-700, y:0,  xp:100,  w:700, h:4
 
 // If you need to place the app in the center
 // (Specifying 50% in xp and yp, and subtract the 50% of the app size in x and y)
-VisiAPI('openFile', {path:'file_path_to_open', x:-350, y:-200,  xp:50, yp:50,  w:700, h:400})``
+VisiAPI('openFile', {path:'file_path_to_open', x:-350, y:-200,  xp:50, yp:50,  w:700, h:400})
 ```
 
 ## openPage
