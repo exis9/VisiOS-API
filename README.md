@@ -94,7 +94,7 @@ VisiAPI('openFile', {path:'Google', type:'newTab'}) //open in new tab
 VisiAPI('openFile', {path:'Google', type:'newWindow', x:0, y:0, w:700, h:400}) //open in new window
 ```
 
-The following technique can be also used for `openPage`
+The following technique can be also used in `openPage`
 ```js
 // If you need to place the app in the top-right corner
 // ( xp is the percentage of the X coordinate on the screen. If you specify xp, x will be an offset from the xp position)
