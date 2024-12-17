@@ -98,11 +98,11 @@ The following technique can be also used for `openPage`
 ```js
 // If you need to place the app in the top-right corner
 // ( xp is the percentage of the X coordinate on the screen. If you specify xp, x will be an offset from the xp position)
-VisiAPI('openFile', {path:'file_path_to_open', x:-700, y:0,  xp:100  w:700, h:400})
+VisiAPI('openFile', {path:'file_path_to_open', x:-700, y:0,  xp:100,  w:700, h:400})
 
 // If you need to place the app in the center
 // (Specifying 50% in xp and yp, and subtract the 50% of the app size in x and y)
-VisiAPI('openFile', {path:'file_path_to_open', x:-350, y:-200,  xp:50, yp:50  w:700, h:400})
+VisiAPI('openFile', {path:'file_path_to_open', x:-350, y:-200,  xp:50, yp:50,  w:700, h:400})``
 ```
 
 ## openPage
