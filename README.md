@@ -6,7 +6,7 @@ As of version 1.1.4, VisiOS has introduced VisiAPI.
 
 # Index
 
-🟩 [General APIs](#fetch)<br>
+🟩 [General APIs](#general-apis)<br>
 　🔷 [ver](#ver) <sub>- Get the current VisiOS version number</sub><br>
 　🔷 [fetch](#fetch) <sub>- Fetch from the target URL</sub><br>
 　🔷 [copyToClipboard](#copytoclipboard) <sub>- Copy text to the clipboard</sub><br>
