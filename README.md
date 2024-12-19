@@ -164,9 +164,10 @@ test()
 
 ## localStorage_set
 If you pass a key name and value, this will add that key to the local storage, or update that key's value if it already exists.
-If it's just temporary, consider using `memStorage_set` instead since it's faster and doesn't use up the browser storage.
-You shouldn't rely on the local storage too much since the data will be lost when the user clears the browser cache.
-To avoid that, use `appStorage_set` instead.
+> [!NOTE]
+> If it's just temporary, consider using `memStorage_set` instead since it's faster and doesn't use up the browser storage.
+> You shouldn't rely on the local storage too much since the data will be lost when the user clears the browser cache.
+> To avoid that, use `appStorage_set` instead.
 
 ```js
 VisiAPI('localStorage_set', {n:'test_key', v:'Wow!!'})
@@ -189,7 +190,8 @@ test()
 If you pass a key name and value, this will add that key to the memory storage, or update that key's value if it already exists.
 The memory storage is shared across all VisiOS apps and is cleared when the user closes the tab.
 
-(NOTE: Unlike `localStorage_set` and `appStorage_set`, `memStorage_set` simply stores values in a plane variable, so you don't have to serialize the values using something like JSON.stringify)
+> [!NOTE]
+> Unlike `localStorage_set` and `appStorage_set`, `memStorage_set` simply stores values in a plane variable, so you don't have to serialize the values using something like JSON.stringify
 
 ```js
 VisiAPI('memStorage_set', {n:'test_key', v:'Wow!!'})
