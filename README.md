@@ -180,7 +180,7 @@ If you pass a key name, this will return the key's value from the local storage,
 async function test(){
 	VisiAPI('localStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
 	let v = await VisiAPI('localStorage_get', {n:'test_key'})
-	alert( v ) //wow!!
+	alert( v ) //Wow VisiOS!!
 }
 test()
 ```
@@ -206,7 +206,7 @@ This feature is good for storing temporary data that you want to share across mu
 async function test(){
 	VisiAPI('memStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
 	let v = await VisiAPI('memStorage_get', {n:'test_key'})
-	alert( v ) //wow!!
+	alert( v ) //Wow VisiOS!!
 }
 test()
 ```
@@ -228,7 +228,7 @@ If you pass a key name, this will return the key's value from the app storage, o
 async function test(){
 	VisiAPI('appStorage_set', {n:'test_key', v:'Wow VisiOS!!'})
 	let v = await VisiAPI('appStorage_get', {n:'test_key'})
-	alert( v ) //wow!!
+	alert( v ) //Wow VisiOS!!
 }
 test()
 ```
