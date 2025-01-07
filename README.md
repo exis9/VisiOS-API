@@ -36,7 +36,7 @@ VisiAPI can enhance the functionality of your VisiOS apps.
 </div>
 
 ## ver
-Get the current VisiOS version number
+Get the current installed VisiOS version number
 ```js
 async function showVersion(){
 	let text = await VisiAPI('ver')
@@ -45,7 +45,7 @@ async function showVersion(){
 showVersion()
 ```
 
-You can also write something like this:
+You can also use then:
 ```js
 VisiAPI('ver').then(v=>{
 	alert(`VisiOS Version: ${v}`)
