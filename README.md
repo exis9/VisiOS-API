@@ -45,6 +45,13 @@ async function showVersion(){
 showVersion()
 ```
 
+You can also write something like this:
+```js
+VisiAPI('ver').then(v=>{
+	alert(`VisiOS Version: ${v}`)
+})
+```
+
 ## fetch
 Fetch from the target URL
 ```js
