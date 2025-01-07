@@ -1,6 +1,7 @@
 # VisiOS API Documentation
 
 As of version 1.1.4, [VisiOS](https://beta-japan.com/) has introduced VisiAPI.
+VisiAPI can enhance the abilities of your VisiOS apps.
 
 
 # Index
