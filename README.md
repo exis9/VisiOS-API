@@ -2,7 +2,6 @@
 
 As of version 1.1.4, [VisiOS](https://beta-japan.com/) has introduced VisiAPI.
 
-(Sorry, I've been writing this doc and it's still a draft. Not perfectly ready yet! ^^)
 
 # Index
 
